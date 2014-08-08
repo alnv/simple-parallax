@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Simple Parallax</title>
+		<script src="../lib/jquery-1.11.1.min.js"></script>
+	  <script src="../dest/jquery.simple-parallax.min.js"></script>
+		<style>
+			img{
+				max-width: 100%;
+				height: auto;
+			}
+			html{
+				background: none;
+				height: 100%;
+				width: 100%;
+			}
+			body{
+				font-family: 'Arial';
+				color: #393939;
+				background: none;
+				height: 100%;
+				width: 100%;
+			}
+			section{
+				background: rgba(235,235,35, 0.25);
+				padding: 15px;
+				margin-bottom:  15px;
+			}
+			.ball{
+				position: relative;
+				width: 125px;
+				height: 125px;
+				background: #de4bff;
+				border-radius: 100%;
+				box-shadow: 0 2px 2px #666;
+				z-index: -999;
+			}
+			.wrapper{
+				width: 90%;
+				max-width:  500px;
+				margin: 0 auto;
+			}
+			.background_align{
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -100;
+			}
+			.background{
+				position: relative;
+				width: 1440px;
+				margin: 0 auto;
+				width: 100%;
+				height: 100%;
+			}
+			.px{
+				position: absolute;
+				width: 100%;
+			}
+			
+			@media (min-width: 1440px){
+				.background_align{
+					width: 1440px;
+					margin: 0 auto;
+				}
+			}
+			.top{
+				top: -50%;
+			}
+			.mid{
+				top: 0%;
+			}
+			.bottom{
+				top: 50%;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div class="wrapper">
+			<header>
+				<h1>Parallax test</h1>
+			</header>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Lorem ipsum dolor sit amet</h2>
+				</header>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+				</article>
+			</section>
+		</div>
+		
+		<div class="background_align">
+			
+			<div class="background">
+				
+				<div class="px top" data-offset="2">
+					<img src="images/block_top1.png">
+				</div>
+				<div class="px top" data-offset="10">
+					<img src="images/block_top2.png">
+				</div>
+				
+				<div class="px top" data-offset="5">
+					<img src="images/block_top3.png">
+				</div>	
+				
+						
+				<div class="px mid" data-offset="3">
+					<img src="images/block_mid1.png">
+				</div>
+				
+				<div class="px mid" data-offset="15">
+					<img src="images/block_mid2.png">
+				</div>
+				
+				<div class="px mid" data-offset="20">
+					<img src="images/block_mid3.png">
+				</div>
+				
+				
+				
+				<div class="px bottom" data-dir="up" data-offset="5">
+					<img src="images/block_bottom1.png">
+				</div>
+				
+				<div class="px bottom" data-dir="up" data-offset="8">
+					<img src="images/block_bottom2.png">
+				</div>
+				
+				<div class="px bottom" data-dir="up" data-offset="15">
+					<img src="images/block_bottom3.png">
+				</div>
+				
+			</div>
+		
+		</div>
+	</body>
+	<script src="//localhost:3111/livereload.js"></script>
+	<script>
+		(function(){
+			
+			$('.px').parallax({
+				offset: 10
+			});
+			
+		})();
+	</script>
+	
+</html>
