@@ -21,6 +21,7 @@
 				background: none;
 				height: 100%;
 				width: 100%;
+				overflow: hidden;
 			}
 			section{
 				background: rgba(235,235,35, 0.25);
@@ -40,6 +41,8 @@
 				width: 90%;
 				max-width:  500px;
 				margin: 0 auto;
+				height: 100%;
+				overflow-y: scroll;
 			}
 			.background_align{
 				position: fixed;
@@ -228,7 +231,8 @@
 		(function(){
 			
 			$('.px').parallax({
-				offset: 10
+				offset: 10,
+				scrollEl: $('.wrapper')
 			});
 			
 		})();
