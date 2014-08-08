@@ -45,23 +45,24 @@
 	$.fn.parallax = function(_opt){
 		
 		
+		var self = this;
+		
 		var agent = navigator.userAgent.match(/(android|iphone|ipad|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi);	
 		var isMobile = false;
 		if(agent !== null){
 			isMobile = true;
 		}
 		
-		var jWindow = $(window);
-		var maxHeight = $(window).height();
-		var scrollY = jWindow.scrollTop();
-		var self = this;
 		var options = {
 			offset: 5,
 			dir: 'down',
-			mobile: isMobile
+			mobile: isMobile,
+			scrollEl: $(window)
 		};
+
 		var off;
 		var attr = {};
+		
 		for (var opt in _opt) {
 			
 			options[opt] = _opt[opt] || options[opt];
@@ -71,6 +72,8 @@
 			}
 			
 		}
+		
+		var scrollY = options.scrollEl.scrollTop();
 		
 		//create rfa http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
 		window.requestAnimFrame = (function(){
@@ -105,7 +108,7 @@
 		
 		function render(){
 		
-			scrollY = jWindow.scrollTop();
+			scrollY = options.scrollEl.scrollTop();
 			if(scrollY < 0){
 				scrollY = 0;
 			}
