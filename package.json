@@ -1,7 +1,7 @@
 {
   "name": "simple-parallax",
   "version": "0.0.9",
-  "description": "jQuery Pluging for simpe parallax scrolling",
+  "description": "jQuery Pluging for simple parallax scrolling",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
