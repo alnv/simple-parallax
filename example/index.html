@@ -29,12 +29,10 @@
 				margin-bottom:  15px;
 			}
 			.ball{
-				position: relative;
-				width: 125px;
-				height: 125px;
+				width: 100px;
+				height: 100px;
 				background: #de4bff;
 				border-radius: 100%;
-				box-shadow: 0 2px 2px #666;
 				z-index: -999;
 			}
 			.wrapper{
@@ -62,9 +60,13 @@
 			}
 			.px{
 				position: absolute;
-				width: 100%;
 			}
-			
+			.left{
+				left: 2em;
+			}
+			.right{
+				right: 2em;
+			}
 			@media (min-width: 1440px){
 				.background_align{
 					width: 1440px;
@@ -72,13 +74,13 @@
 				}
 			}
 			.top{
-				top: -50%;
+				top: 5%;
 			}
 			.mid{
-				top: 0%;
+				top: 45%;
 			}
 			.bottom{
-				top: 50%;
+				top: 75%;
 			}
 		</style>
 	</head>
@@ -184,44 +186,14 @@
 			
 			<div class="background">
 				
-				<div class="px top" data-offset="2">
-					<img src="images/block_top1.png">
-				</div>
-				<div class="px top" data-offset="10">
-					<img src="images/block_top2.png">
-				</div>
-				
-				<div class="px top" data-offset="5">
-					<img src="images/block_top3.png">
-				</div>	
-				
-						
-				<div class="px mid" data-offset="3">
-					<img src="images/block_mid1.png">
-				</div>
-				
-				<div class="px mid" data-offset="15">
-					<img src="images/block_mid2.png">
-				</div>
-				
-				<div class="px mid" data-offset="20">
-					<img src="images/block_mid3.png">
-				</div>
-				
-				
-				
-				<div class="px bottom" data-dir="up" data-offset="5">
-					<img src="images/block_bottom1.png">
-				</div>
-				
-				<div class="px bottom" data-dir="up" data-offset="8">
-					<img src="images/block_bottom2.png">
-				</div>
-				
-				<div class="px bottom" data-dir="up" data-offset="15">
-					<img src="images/block_bottom3.png">
-				</div>
-				
+				<div class="px right ball top" data-offset="10"></div>
+				<div class="px right ball mid" data-offset="15"></div>
+				<div class="px right ball bottom" data-dir="up" data-offset="20"></div>	
+
+				<div class="px left ball top" data-offset="15"></div>
+				<div class="px left ball mid" data-offset="20"></div>
+				<div class="px left ball bottom" data-dir="up" data-offset="12"></div>
+
 			</div>
 		
 		</div>
