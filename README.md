@@ -1,8 +1,8 @@
 # simple-parallax
 ===============
 
-### jQuery Pluging for simple parallax scrolling
+## jQuery Pluging for simple parallax scrolling
 
-Documentation and Example (German): http://alexandernaumov.de/blog/ein-jquery-plugin-fuer-parallax-scrolling.html
+- Author: [Alexander Naumov](http://www.alexandernaumov.de)
+- Documentation (German): [jQuery Parallax Scrolling Plugin](http://www.alexandernaumov.de/blog/ein-jquery-plugin-fuer-parallax-scrolling)
 
-English cooming soon!
